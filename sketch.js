@@ -47,8 +47,7 @@ function draw() {
     stroke(45, 28, 82);
     strokeWeight(7);
     textFont(font);
-    //hp ukuran 30
-    textSize(50);
+    textSize(30);
     textAlign(CENTER);
     // name
     text(name, imgX + (mouseX - width / 2) / 30, imgY + 200 + (mouseY - height / 2) / 30);
