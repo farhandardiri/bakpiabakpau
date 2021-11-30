@@ -8,8 +8,8 @@ var name = "Sulusiyah";
 var sfxPop;
 
 function preload() {
-    foto = loadImage("assets/img/foto.png");
-    bgStatic = loadImage("assets/img/jakarta.png");
+    foto = loadImage("assets/img/foto.jpg");
+    bgStatic = loadImage("assets/img/oi.jpg");
     font = loadFont("assets/font/FredokaOne.ttf");
     sfxPop = loadSound("assets/sfx/pop.mp3");
 }
