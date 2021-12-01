@@ -68,7 +68,8 @@
 <body>
     <div class="bgimg">
         <div class="topleft">
-            <!-- <h1>لا أحدثك لكنني أفكر بك دائما</h1> -->
+            <P id="ingat">Pengingat</P>
+            <h1 id="kata">HARI ULANG TAHUN</h1>
             <!-- <p>"Aku tidak berbicara denganmu, tetapi aku selalu memikirikanmu"</p> -->
         </div>
         <div class="middle">
@@ -84,7 +85,7 @@
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Dec 20, 2021 12:00:00").getTime();
+    var countDownDate = new Date("Dec 19, 2021 00:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function () {
@@ -112,6 +113,8 @@
             document.getElementById("demo").innerHTML = `"<h1>لا أحدثك لكنني أفكر بك دائما</h1>\n<p>"Aku tidak berbicara
                 denganmu, tetapi aku selalu memikirikanmu"</p>"`;
             document.getElementById("bakpia").innerHTML = ""
+            document.getElementById("ingat").innerHTML = ""
+            document.getElementById("kata").innerHTML = ""
         }
     }, 1000);
 </script>

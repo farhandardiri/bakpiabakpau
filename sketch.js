@@ -3,9 +3,10 @@ var balloons = [];
 var total = 12;
 var font;
 var foto, bgStatic;
-var txt = "HAPPY BIRTHDAY";
-var name = "Sulusiyah";
+let txt = "";
+let name = "";
 var sfxPop;
+var hari = "";
 
 function preload() {
     foto = loadImage("assets/img/foto.jpg");
@@ -13,6 +14,8 @@ function preload() {
     font = loadFont("assets/font/FredokaOne.ttf");
     sfxPop = loadSound("assets/sfx/pop.mp3");
 }
+
+
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -49,6 +52,30 @@ function draw() {
     textFont(font);
     textSize(30);
     textAlign(CENTER);
+    // Mengatur waktu akhir perhitungan mundur
+    var countDownDate = new Date("Dec 19, 2021 00:00:00").getTime();
+
+    // Memperbarui hitungan mundur setiap 1 detik
+    var x = setInterval(function () {
+
+        // Untuk mendapatkan tanggal dan waktu hari ini
+        var now = new Date().getTime();
+
+        // Temukan jarak antara sekarang dan tanggal hitung mundur
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (distance < 0) {
+            clearInterval(x);
+            name = "Sulusiyah";
+            txt = "HAPPY BIRTHDAY"
+        }
+    }, 1000);
     // name
     text(name, imgX + (mouseX - width / 2) / 30, imgY + 200 + (mouseY - height / 2) / 30);
     // teks hbd
