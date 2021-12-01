@@ -60,6 +60,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10px;
         }
     </style>
 </head>
@@ -74,7 +75,7 @@
             <p id="demo"></p>
         </div>
         <div class="bottomleft">
-            <p>Bakpia Bakpau</p>
+            <p id="bakpia">Bakpia Bakpau</p>
         </div>
     </div>
 </body>
@@ -83,7 +84,7 @@
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Dec 20, 2021 12:00:00").getTime();
+    var countDownDate = new Date("Dec 01, 2021 06:55:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function () {
@@ -108,7 +109,9 @@
         // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("demo").innerHTML = `"<h1>لا أحدثك لكنني أفكر بك دائما</h1>\n<p>"Aku tidak berbicara
+                denganmu, tetapi aku selalu memikirikanmu"</p>"`;
+            document.getElementById("bakpia").innerHTML = ""
         }
     }, 1000);
 </script>
