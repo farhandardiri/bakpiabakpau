@@ -53,7 +53,7 @@ function draw() {
     textSize(30);
     textAlign(CENTER);
     // Mengatur waktu akhir perhitungan mundur
-    var countDownDate = new Date("Dec 19, 2021 00:00:00").getTime();
+    var countDownDate = new Date("Dec 20, 2021 00:00:00").getTime();
 
     // Memperbarui hitungan mundur setiap 1 detik
     var x = setInterval(function () {
